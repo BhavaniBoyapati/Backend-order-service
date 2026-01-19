@@ -9,3 +9,11 @@ app.get("/orders", (req, res) => {
     { orderId: 102, product: "Phone" }
   ]);
 });
+
+app.get("/health", (req, res) => {
+  res.send("Order Service is healthy");
+});
+
+app.listen(PORT, () =>
+  console.log(`Order Service running on port ${PORT}`)
+);
